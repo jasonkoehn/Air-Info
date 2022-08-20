@@ -97,6 +97,7 @@
 			children = (
 				87FF77B028B1885200D20483 /* Air_InfoApp.swift */,
 				87FF77B228B1885200D20483 /* ContentView.swift */,
+				87FF77DB28B18F1500D20483 /* Fleet List */,
 				87FF77B428B1885300D20483 /* Assets.xcassets */,
 				87FF77B628B1885300D20483 /* Air_Info.entitlements */,
 				87FF77B728B1885300D20483 /* Preview Content */,
@@ -127,6 +128,13 @@
 				87FF77CE28B1885300D20483 /* Air_InfoUITestsLaunchTests.swift */,
 			);
 			path = "Air InfoUITests";
+			sourceTree = "<group>";
+		};
+		87FF77DB28B18F1500D20483 /* Fleet List */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Fleet List";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
