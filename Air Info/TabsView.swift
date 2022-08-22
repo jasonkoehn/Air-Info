@@ -11,54 +11,19 @@ struct TabsView: View {
     @State private var selectedTabIndex = 0
     var body: some View {
         TabView {
-            Text("Home")
-                .tabItem {
-                    Image(systemName: "house")
-                    Text("Home")
+            NavigationView {
+                if selectedTabIndex == 0 {
+                    AirlineListView()
+                        .navigationBarItems(trailing: Button(action: {selectedTabIndex = 1}){Text("By Country")})
+                } else if selectedTabIndex == 1 {
+                    CountriesListView()
+                        .navigationBarItems(trailing: Button(action: {selectedTabIndex = 0}){Text("Airlines")})
                 }
-            VStack {
-                SlidingTabView(selection: $selectedTabIndex, tabs: ["Airlines", "By Country"], activeAccentColor: .green, inactiveAccentColor: .gray, selectionBarColor: .green)
-                    .background(Color(.systemGray5))
-                switch selectedTabIndex {
-                case 0:
-                    NavigationView {
-                        AirlineListView()
-                            .onSwiped(.left) {
-                                        selectedTabIndex = 1
-                                    }
-                    }
-                case 1:
-                    NavigationView {
-                        CountriesListView()
-                            .onSwiped(.right) {
-                                        selectedTabIndex = 0
-                                    }
-                    }
-                default:
-                    Text("")
-                }
-                Spacer()
             }
             .tabItem {
                 Image(systemName: "airplane")
                 Text("Airlines")
             }
-            Text("Airport Codes")
-                .tabItem {
-                    Image(systemName: "list.bullet.rectangle")
-                    Text("Airport Codes")
-                }
-            Text("Facts")
-                .tabItem {
-                    Image(systemName: "list.bullet")
-                    Text("Facts")
-                }
-            Text("Settings")
-                .tabItem {
-                    Image(systemName: "gear")
-                    Text("Settings")
-                }
         }
     }
 }
-

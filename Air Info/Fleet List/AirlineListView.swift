@@ -50,8 +50,7 @@ struct AirlineListView: View {
         }
         .searchable(text: $searchText)
         .listStyle(PlainListStyle())
-        .navigationBarTitle("")
-        .navigationBarHidden(true)
+        .navigationBarTitle("Airlines")
         .task {
             loadAirlinesLetters()
         }

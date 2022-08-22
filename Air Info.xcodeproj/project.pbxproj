@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		878E3F8E28B3CD93004A7643 /* CountriesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878E3F8D28B3CD93004A7643 /* CountriesListView.swift */; };
 		878E3F9028B3D2EF004A7643 /* AirlinesByCountryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878E3F8F28B3D2EF004A7643 /* AirlinesByCountryView.swift */; };
-		878E3F9328B3E5A0004A7643 /* SlidingTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878E3F9228B3E5A0004A7643 /* SlidingTabView.swift */; };
 		87B00F4928B2F9220078D785 /* AirlineListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B00F4828B2F9220078D785 /* AirlineListView.swift */; };
 		87B00F4B28B302760078D785 /* TabsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B00F4A28B302760078D785 /* TabsView.swift */; };
 		87B00F4D28B3087C0078D785 /* AirlineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B00F4C28B3087C0078D785 /* AirlineView.swift */; };
@@ -45,7 +44,6 @@
 /* Begin PBXFileReference section */
 		878E3F8D28B3CD93004A7643 /* CountriesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesListView.swift; sourceTree = "<group>"; };
 		878E3F8F28B3D2EF004A7643 /* AirlinesByCountryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirlinesByCountryView.swift; sourceTree = "<group>"; };
-		878E3F9228B3E5A0004A7643 /* SlidingTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlidingTabView.swift; sourceTree = "<group>"; };
 		87B00F4828B2F9220078D785 /* AirlineListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirlineListView.swift; sourceTree = "<group>"; };
 		87B00F4A28B302760078D785 /* TabsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabsView.swift; sourceTree = "<group>"; };
 		87B00F4C28B3087C0078D785 /* AirlineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirlineView.swift; sourceTree = "<group>"; };
@@ -129,7 +127,6 @@
 				87FF77B428B1885300D20483 /* Assets.xcassets */,
 				87FF77B628B1885300D20483 /* Air_Info.entitlements */,
 				87FF77B728B1885300D20483 /* Preview Content */,
-				878E3F9228B3E5A0004A7643 /* SlidingTabView.swift */,
 			);
 			path = "Air Info";
 			sourceTree = "<group>";
@@ -302,7 +299,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				878E3F9328B3E5A0004A7643 /* SlidingTabView.swift in Sources */,
 				87B00F4B28B302760078D785 /* TabsView.swift in Sources */,
 				87C3032F28B1A65300B81ADA /* DataLoading&Arrays.swift in Sources */,
 				87C3032B28B1A64100B81ADA /* DecodeStructs.swift in Sources */,

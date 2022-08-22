@@ -28,7 +28,6 @@ struct CountriesListView: View {
         .searchable(text: $searchText)
         .listStyle(PlainListStyle())
         .navigationBarTitle("Countries")
-        .navigationBarHidden(true)
         .task {
             loadCountries()
         }
