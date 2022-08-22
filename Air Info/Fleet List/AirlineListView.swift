@@ -19,13 +19,15 @@ struct AirlineListView: View {
                     Section(letter) {
                         ForEach(airlines, id: \.name) { airline in
                             if airline.name.first?.uppercased() == letter {
-                                HStack {
-                                    Image(airline.name)
-                                        .resizable()
-                                        .aspectRatio(contentMode: .fit)
-                                        .frame(width: 50)
-                                    Text(airline.name)
-                                        .font(.system(size: 23))
+                                NavigationLink(destination: AirlineView()) {
+                                    HStack {
+                                        Image(airline.name)
+                                            .resizable()
+                                            .aspectRatio(contentMode: .fit)
+                                            .frame(width: 50)
+                                        Text(airline.name)
+                                            .font(.system(size: 23))
+                                    }
                                 }
                             }
                         }
@@ -33,20 +35,23 @@ struct AirlineListView: View {
                 }
             } else {
                 ForEach(searchResults, id: \.name) { airline in
-                    HStack {
-                        Image(airline.name)
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 50)
-                        Text(airline.name)
-                            .font(.system(size: 23))
+                    NavigationLink(destination: AirlineView()) {
+                        HStack {
+                            Image(airline.name)
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 50)
+                            Text(airline.name)
+                                .font(.system(size: 23))
+                        }
                     }
                 }
             }
         }
         .searchable(text: $searchText)
         .listStyle(PlainListStyle())
-        .navigationTitle("Airlines")
+        .navigationBarTitle("")
+        .navigationBarHidden(true)
         .task {
             loadAirlinesLetters()
         }
