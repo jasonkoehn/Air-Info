@@ -12,13 +12,14 @@ struct TabsView: View {
     var body: some View {
         TabView {
             NavigationView {
-                if selectedTabIndex == 0 {
-                    AirlineListView()
-                        .navigationBarItems(trailing: Button(action: {selectedTabIndex = 1}){Text("By Country")})
-                } else if selectedTabIndex == 1 {
-                    CountriesListView()
-                        .navigationBarItems(trailing: Button(action: {selectedTabIndex = 0}){Text("Airlines")})
-                }
+//                if selectedTabIndex == 0 {
+//                    AirlineListView()
+//                        .navigationBarItems(trailing: Button(action: {selectedTabIndex = 1}){Text("By Country")})
+//                } else if selectedTabIndex == 1 {
+//                    CountriesListView()
+//                        .navigationBarItems(trailing: Button(action: {selectedTabIndex = 0}){Text("Airlines")})
+//                }
+                TogetherView()
             }
             .tabItem {
                 Image(systemName: "airplane")
