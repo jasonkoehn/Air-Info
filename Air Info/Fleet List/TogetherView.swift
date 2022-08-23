@@ -25,30 +25,30 @@ struct TogetherView: View {
                             viewState = 1
                         }) {
                             Text("By Country")
-                                .font(.system(size: 25))
-                                .frame(width: 150, height: 40)
-                                .background(Color.green)
-                                .cornerRadius(30)
-                                .foregroundColor(.black)
+                                .font(.system(size: 27))
+                                .padding(10)
+                                .background(Color(.systemGray5))
+                                .cornerRadius(20)
+                                .foregroundColor(.red)
                                 .bold()
                         }
-                        .padding(20)
                     } else if viewState == 1 {
                         Button(action: {
                             viewState = 0
                         }) {
                             Text("Airlines")
-                                .font(.system(size: 25))
-                                .frame(width: 100, height: 40)
-                                .background(Color.green)
-                                .cornerRadius(30)
-                                .foregroundColor(.black)
+                                .font(.system(size: 27))
+                                .padding(10)
+                                .background(Color(.systemGray5))
+                                .cornerRadius(20)
+                                .foregroundColor(.red)
                                 .bold()
                         }
-                        .padding(20)
                     }
                 }
+                .padding(.horizontal, 20)
             }
+            .padding(.vertical, 40)
         }
     }
 }
