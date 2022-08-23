@@ -19,5 +19,6 @@ struct TabsView: View {
                 Text("Airlines")
             }
         }
+        .accentColor(Color(.systemBlue))
     }
 }

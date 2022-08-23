@@ -24,32 +24,37 @@ struct TogetherView: View {
                         Button(action: {
                             viewState = 1
                         }) {
-                            Text("By Country")
-                                .font(.system(size: 27))
-                                .padding(10)
-                                .background(Color(.systemGray5))
-                                .cornerRadius(20)
-                                .foregroundColor(.red)
-                                .bold()
+                            ButtonView(text: "By Country", image: "flag.fill")
                         }
                     } else if viewState == 1 {
                         Button(action: {
                             viewState = 0
                         }) {
-                            Text("Airlines")
-                                .font(.system(size: 27))
-                                .padding(10)
-                                .background(Color(.systemGray5))
-                                .cornerRadius(20)
-                                .foregroundColor(.red)
-                                .bold()
+                            ButtonView(text: "Airlines", image: "airplane")
                         }
                     }
                 }
-                .padding(.horizontal, 20)
+                .padding(.horizontal, 15)
             }
-            .padding(.vertical, 40)
+            .padding(.vertical, 25)
         }
     }
 }
 
+struct ButtonView: View {
+    var text: String
+    var image: String
+    var body: some View {
+        HStack {
+            Image(systemName: image)
+                .font(.system(size: 25))
+                .foregroundColor(Color(.systemBlue))
+            Text(text)
+                .font(.system(size: 25))
+                .foregroundColor(Color(.systemBlue))
+        }
+        .padding(8)
+        .background(Color(.systemGray5))
+        .cornerRadius(15)
+    }
+}
