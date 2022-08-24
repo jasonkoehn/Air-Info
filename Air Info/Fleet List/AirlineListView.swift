@@ -19,7 +19,7 @@ struct AirlineListView: View {
                     Section(letter) {
                         ForEach(airlines, id: \.name) { airline in
                             if airline.name.first?.uppercased() == letter {
-                                NavigationLink(destination: AirlineView()) {
+                                NavigationLink(destination: AirlineView(name: airline.name, country: airline.country, website: airline.website, iata: airline.iata, icao: airline.icao, callsign: airline.callsign, fleetsize: airline.fleetsize, types: airline.types)) {
                                     HStack {
                                         Image(airline.name)
                                             .resizable()
@@ -35,7 +35,7 @@ struct AirlineListView: View {
                 }
             } else {
                 ForEach(searchResults, id: \.name) { airline in
-                    NavigationLink(destination: AirlineView()) {
+                    NavigationLink(destination: AirlineView(name: airline.name, country: airline.country, website: airline.website, iata: airline.iata, icao: airline.icao, callsign: airline.callsign, fleetsize: airline.fleetsize, types: airline.types)) {
                         HStack {
                             Image(airline.name)
                                 .resizable()
@@ -76,13 +76,13 @@ struct AirlineListView: View {
             } else {
                 Task {
                     await importFleetData()
-                    loadFleetData()
+                    loadAirlinesLetters()
                 }
             }
         } else {
             Task {
                 await importFleetData()
-                loadFleetData()
+                loadAirlinesLetters()
             }
         }
         // Get and decode Letters
@@ -92,13 +92,13 @@ struct AirlineListView: View {
             } else {
                 Task {
                     await importFleetData()
-                    loadFleetData()
+                    loadAirlinesLetters()
                 }
             }
         } else {
             Task {
                 await importFleetData()
-                loadFleetData()
+                loadAirlinesLetters()
             }
         }
     }

@@ -15,7 +15,7 @@ struct AirlinesByCountryView: View {
         List {
             ForEach(searchResults, id: \.name) { airline in
                 if airline.country == country {
-                    NavigationLink(destination: AirlineView()) {
+                    NavigationLink(destination: AirlineView(name: airline.name, country: airline.country, website: airline.website, iata: airline.iata, icao: airline.icao, callsign: airline.callsign, fleetsize: airline.fleetsize, types: airline.types)) {
                         HStack {
                             Image(airline.name)
                                 .resizable()
@@ -59,13 +59,13 @@ struct AirlinesByCountryView: View {
             } else {
                 Task {
                     await importFleetData()
-                    loadFleetData()
+                    loadAirlines()
                 }
             }
         } else {
             Task {
                 await importFleetData()
-                loadFleetData()
+                loadAirlines()
             }
         }
     }

@@ -12,12 +12,22 @@ struct TabsView: View {
     var body: some View {
         TabView {
             NavigationView {
-                TogetherView()
+                FleetListView()
             }
             .tabItem {
                 Image(systemName: "airplane")
                 Text("Airlines")
             }
+            Text("Home")
+                .tabItem {
+                    Image(systemName: "house")
+                    Text("Home")
+                }
+            Text("Settings")
+                .tabItem {
+                    Image(systemName: "gear")
+                    Text("Settings")
+                }
         }
         .accentColor(Color(.systemBlue))
     }

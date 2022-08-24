@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TogetherView: View {
+struct FleetListView: View {
     @State var viewState = 0
     var body: some View {
         ZStack {
@@ -24,7 +24,7 @@ struct TogetherView: View {
                         Button(action: {
                             viewState = 1
                         }) {
-                            ButtonView(text: "By Country", image: "flag.fill")
+                            ButtonView(text: "By Country", image: "")
                         }
                     } else if viewState == 1 {
                         Button(action: {
@@ -46,15 +46,18 @@ struct ButtonView: View {
     var image: String
     var body: some View {
         HStack {
-            Image(systemName: image)
-                .font(.system(size: 25))
-                .foregroundColor(Color(.systemBlue))
+            if image != "" {
+                Image(systemName: image)
+                    .font(.system(size: 25))
+                    .foregroundColor(Color(.systemGreen))
+            }
             Text(text)
                 .font(.system(size: 25))
-                .foregroundColor(Color(.systemBlue))
+                .foregroundColor(Color(.systemGreen))
         }
         .padding(8)
         .background(Color(.systemGray5))
         .cornerRadius(15)
+        .shadow(radius: 20)
     }
 }

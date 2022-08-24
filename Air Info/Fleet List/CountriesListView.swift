@@ -54,13 +54,13 @@ struct CountriesListView: View {
             } else {
                 Task {
                     await importFleetData()
-                    loadFleetData()
+                    loadCountries()
                 }
             }
         } else {
             Task {
                 await importFleetData()
-                loadFleetData()
+                loadCountries()
             }
         }
     }
